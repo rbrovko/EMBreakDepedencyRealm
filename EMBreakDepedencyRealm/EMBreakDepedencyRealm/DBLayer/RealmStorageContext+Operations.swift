@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-// MARK: - Storable
+// MARK: - Storable: write and update operations
 extension RealmStorageContext {
     func create<T: Storable>(_ model: T.Type, completion: @escaping ((T) -> Void)) throws {
         guard let realm = self.realm else {
@@ -41,7 +41,7 @@ extension RealmStorageContext {
     }
 }
 
-// MARK: - Storable
+// MARK: - Storable: delete operations
 extension RealmStorageContext {
     func delete(object: Storable) throws {
         guard let realm = self.realm else {
@@ -80,7 +80,7 @@ extension RealmStorageContext {
     }
 }
 
-// MARK: - Storable
+// MARK: - Storable: fetch operation
 extension RealmStorageContext {
     func fetch<T: Storable>(_ model: T.Type, predicate: NSPredicate? = nil, sorted: Sorted? = nil, completion: (([T]) -> Void)) {
         // swiftlint:disable:next force_cast

@@ -27,7 +27,7 @@ public enum ConfigurationType {
     }
 }
 
-/// Realm STorageContext
+/// Realm StorageContext
 class RealmStorageContext: StorageContext {
     var realm: Realm?
 
