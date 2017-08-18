@@ -1,0 +1,12 @@
+excluded: 
+- Carthage
+- Pods
+
+line_length: 300
+cyclomatic_complexity: 30
+variable_name:
+  max_length:
+    warning: 32
+    error: 40
+  min_length:
+    warning: 1

@@ -9,10 +9,10 @@
 import Foundation
 import RealmSwift
 
-/*
- Dummy protocol for Entities
- */
+/// Dummy protocol for Entities
 public protocol Storable {
 }
+
+// MARK: - Storable
 extension Object: Storable {
 }

@@ -9,16 +9,17 @@
 import Foundation
 import RealmSwift
 
+/// Record entity
 public class PFARecord: Object {
     dynamic var recordID = UUID().uuidString
     private(set) dynamic var addDate = Date()
     dynamic var title: String = ""
     dynamic var price: Double = 0.0
-    
+
     override public static func primaryKey() -> String? {
         return "recordID"
     }
-    
+
     override public var description: String {
         return "\(self.recordID)\n\(self.title)\n\(self.price)\n"
     }

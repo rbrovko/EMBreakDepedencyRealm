@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		2179D5011F46F6E900393C67 /* swiftlint-autocorrect */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2179D5041F46F6EA00393C67 /* Build configuration list for PBXAggregateTarget "swiftlint-autocorrect" */;
+			buildPhases = (
+				2179D5051F46F6FB00393C67 /* autocorrect */,
+			);
+			dependencies = (
+			);
+			name = "swiftlint-autocorrect";
+			productName = "swiftlint-autocorrect";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		75934F331F142E13004AD5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75934F321F142E13004AD5A2 /* AppDelegate.swift */; };
 		75934F351F142E13004AD5A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75934F341F142E13004AD5A2 /* ViewController.swift */; };
@@ -23,6 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2179D5071F46F76700393C67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75934F271F142E13004AD5A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2179D5011F46F6E900393C67;
+			remoteInfo = "swiftlint-autocorrect";
+		};
 		75934F441F142E13004AD5A2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 75934F271F142E13004AD5A2 /* Project object */;
@@ -180,10 +201,12 @@
 				75934F2D1F142E13004AD5A2 /* Resources */,
 				1B81C2256CED66087DE65157 /* [CP] Embed Pods Frameworks */,
 				EB9BB6AFDA9D654A70CDA247 /* [CP] Copy Pods Resources */,
+				2179D5061F46F75C00393C67 /* swiftlint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2179D5081F46F76700393C67 /* PBXTargetDependency */,
 			);
 			name = EMBreakDepedencyRealm;
 			productName = EMBreakDepedencyRealm;
@@ -221,6 +244,10 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = ennioma;
 				TargetAttributes = {
+					2179D5011F46F6E900393C67 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
 					75934F2E1F142E13004AD5A2 = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
@@ -247,6 +274,7 @@
 			targets = (
 				75934F2E1F142E13004AD5A2 /* EMBreakDepedencyRealm */,
 				75934F421F142E13004AD5A2 /* EMBreakDepedencyRealmTests */,
+				2179D5011F46F6E900393C67 /* swiftlint-autocorrect */,
 			);
 		};
 /* End PBXProject section */
@@ -301,6 +329,34 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMBreakDepedencyRealm/Pods-EMBreakDepedencyRealm-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		2179D5051F46F6FB00393C67 /* autocorrect */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = autocorrect;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		2179D5061F46F75C00393C67 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		2E9CD721F09315628FA3F37D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -390,6 +446,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2179D5081F46F76700393C67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2179D5011F46F6E900393C67 /* swiftlint-autocorrect */;
+			targetProxy = 2179D5071F46F76700393C67 /* PBXContainerItemProxy */;
+		};
 		75934F451F142E13004AD5A2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 75934F2E1F142E13004AD5A2 /* EMBreakDepedencyRealm */;
@@ -417,6 +478,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2179D5021F46F6EA00393C67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2179D5031F46F6EA00393C67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		75934F4A1F142E13004AD5A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -571,6 +646,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2179D5041F46F6EA00393C67 /* Build configuration list for PBXAggregateTarget "swiftlint-autocorrect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2179D5021F46F6EA00393C67 /* Debug */,
+				2179D5031F46F6EA00393C67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		75934F2A1F142E13004AD5A2 /* Build configuration list for PBXProject "EMBreakDepedencyRealm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
